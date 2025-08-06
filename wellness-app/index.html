@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Daily Wellness Companion</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index.html">Home</a> |
+    <a href="about.html">About</a> |
+    <a href="purpose.html">Purpose</a> |
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <h1>Daily Wellness Companion</h1>
+
+  <section>
+    <img src="images/wellness.jpg" alt="Wellness Banner" style="width:100%; border-radius:10px;">
+  </section>
+
+  <section>
+    <h2>User Type</h2>
+    <select id="user-type">
+      <option value="">-- Select --</option>
+      <option value="student">Student</option>
+      <option value="worker">Worker</option>
+      <option value="home">At Home</option>
+    </select>
+  </section>
+
+  <section>
+    <h2>Mood Tracker</h2>
+    <div id="mood-options">
+      <button class="mood-btn">Happy</button>
+      <button class="mood-btn">Neutral</button>
+      <button class="mood-btn">Sad</button>
+      <button class="mood-btn">Angry</button>
+      <button class="mood-btn">Tired</button>
+    </div>
+    <p id="mood-result"></p>
+  </section>
+
+  <section>
+    <h2>Water Intake</h2>
+    <p>Goal: 8 cups</p>
+    <button onclick="addWater()">Add a Cup</button>
+    <div class="progress">
+      <div class="progress-bar" id="water-bar"></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Sleep Tracker</h2>
+    <p>How many hours did you sleep last night?</p>
+    <input type="number" id="sleep-hours" min="0" max="24">
+  </section>
+
+  <section>
+    <h2>Motivational Quote</h2>
+    <p class="quote" id="quote"></p>
+    <button onclick="generateQuote()">New Quote</button>
+  </section>
+
+  <section>
+    <h2>Breathing Exercise</h2>
+    <div class="circle"></div>
+  </section>
+
+  <section>
+    <h2>Daily Journal</h2>
+    <textarea id="journal" placeholder="Write your thoughts..."></textarea>
+    <button onclick="saveJournal()">Save</button>
+  </section>
+
+  <section>
+    <h2>Daily Recommendation</h2>
+    <button onclick="getRecommendation()">Check Recommendation</button>
+    <p id="recommendation"></p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
